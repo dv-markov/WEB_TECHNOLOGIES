@@ -9,31 +9,60 @@
 <body>
     <form>
         <fieldset>
-            <legend>Общая информация</legend>
-            <div>
-                <label for="surname">Фамилия</label>
-                <input id="surname" type="text" name="surname" placeholder="Иванов">
-            </div>
-            <div>
-                <label for="name">Имя</label>
-                <input id="name" type="text" name="name" placeholder="Иван">
-            </div>
-            <div>
-                <label for="midname">Отчество</label>
-                <input id="midname" type="text" name="midname" placeholder="Иванович">
-            </div>
-            <div>
-                <label for="email">email</label>
-                <input id="email" type="text" name="email" placeholder="mail@mail.ru">
-            </div>
+          <legend>Общая информация</legend>
+          <div>
+            <label for="surname">Фамилия</label>
+            <input id="surname" type="text" name="surname" placeholder="Иванов">
+          </div>
+          <div>
+            <label for="name">Имя</label>
+            <input id="name" type="text" name="name" placeholder="Иван">
+          </div>
+          <div>
+            <label for="midname">Отчество</label>
+            <input id="midname" type="text" name="midname" placeholder="Иванович">
+          </div>
+          <div>
+            <label for="email">email</label>
+            <input id="email" type="text" name="email" placeholder="mail@mail.ru">
+          </div>
         </fieldset>
-        <fieldset>
-            <legend>Пол</legend>
-            <div>
-                <input id="sex_m" type="radio" name="sex_choice" value="male">
-                <label for=""
-            </div>
+        <fieldset class="margin-top">
+          <legend>Пол</legend>
+          <input id="sex_male" type="radio" name="sex_choice" value="male">
+          <label for="sex_male">М</label>
+          <input id="sex_female" type="radio" name="sex_choice" value="female">
+          <label for="sex_female">Ж</label>
         </fieldset>
-    </form>
+        <fieldset class="margin-top">
+          <legend>Хобби</legend>
+          <input id="hobby_drawing" type="checkbox" name="hobby" value="drawing">
+          <label for="hobby_drawing">Рисование</label>
+          <input id="hobby_reading" type="checkbox" name="hobby" value="reading">
+          <label for="hobby_reading">Чтение</label>
+          <input id="hobby_knitting" type="checkbox" name="hobby" value="knitting">
+          <label for="hobby_knitting">Вязание</label>
+          <input id="hobby_cooking" type="checkbox" name="hobby" value="cooking">
+          <label for="hobby_cooking">Кулинария</label>
+        </fieldset>
+        <div class="margin-top">
+          <button type="submit">Отправить</button>
+          <button type="reset">Очистить</button>
+        </div>
+      </form>
 </body>
 </html>
+
+
+<style>
+div{
+    margin-bottom: 10px;
+}
+label{
+    width: 80px;
+    display:inline-block;
+}
+.margin-top{
+    margin-top: 20px;
+}
+</style>
