@@ -1,8 +1,7 @@
 <!--
+    Таблица в html заключена в теги <table> </table>
     th - table head (шапка таблицы)
-
     tr - table row (строка таблицы)
-
     td - table data (данные таблицы)
 -->
 
@@ -15,6 +14,129 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <table>
+        <tr> <!-- первая строка, шапка таблицы -->
+          <th>Товар</th>  <!-- заголовок шапки -->
+          <th>Январь</th>
+          <th>Февраль</th>
+          <th>Март</th>
+        </tr>
+        <tr> <!-- вторая строка-->
+          <td>Персики</td>
+          <td>86</td>
+          <td>85</td>
+          <td>89</td>
+        </tr>
+        <tr> <!-- третья строка-->
+          <td>Яблоки</td>
+          <td>87</td>
+          <td>90</td>
+          <td>97</td>
+        </tr>
+        <tr> <!-- четвертая строка-->
+          <td>Бананы</td>
+          <td>57</td>
+          <td>53</td>
+          <td>55</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <table>
+        <tr>
+          <th colspan="2">Работник</th>
+          <th colspan="3">Данные о зарплате</th>
+        </tr>
+        <tr>
+          <th>ФИО</th>
+          <th>Должность</th>
+          <th>Отраб.дней</th>
+          <th>Оклад</th>
+          <th>Зарплата</th>
+        </tr>
+        <tr>
+          <td>Иванов Иван</td>
+          <td>Директор</td>
+          <td>20</td>
+          <td>1500</td>
+          <td>30000</td>
+        </tr>
+    </table>
+    <br><br><br>
+    <table>
+        <tr>
+          <th rowspan="3">Вид учебной деятельности</th>
+          <th colspan="3">Количество часов</th>
+        </tr>
+        <tr>
+          <th rowspan="2">Всего по учебному плану</th>
+          <th colspan="2">В т.ч. по семестрам</th>
+        </tr>
+        <tr>
+          <th>8</th>
+          <th>9</th>
+        </tr>
+        <tr>
+          <td>Аудиторные задания</td>
+          <td>100</td>
+          <td>56</td>
+          <td>44</td>
+        </tr>
+      </table>
 </body>
 </html>
+
+
+<!--Вариант 1-->
+<style>
+    table { /*таблица*/ 
+        border-collapse: collapse; /* убирает двойные линии*/
+        border: 2px solid rgb(200,200,200); /* толщина, тип и цвет рамки*/
+        letter-spacing: 1px; /*расстояние между буквами*/
+        font-size: 20px; /*размер текста*/
+    }
+
+    td, th { /*заголовки и ячейки*/ 
+        border: 1px solid rgb(190,190,190);
+        padding: 10px 20px; /*внутренние отсупы внутри ячейки*/
+    }
+
+    th { /*заголовки*/ 
+        background-color: rgb(235,235,235); /*заливка ячеек*/
+    }
+
+    td { /*ячейки*/ 
+        text-align: center; /*текст по центру*/
+    }
+</style>
+
+
+<!--Вариант 2-->
+<!-- <style>
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-size: 20px;
+  }
+  th, td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+</style> -->
+
+
+<!--Вариант 3-->
+<!-- <style>
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-size: 20px;
+  }
+  th, td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+</style> -->
