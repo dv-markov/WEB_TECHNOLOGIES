@@ -11,5 +11,16 @@
 
   /* селектор ID */
   #header1 {
-    color:blue
+    color:blue;
+  }
+
+  /* селектор класса */
+  .text1 {
+    font-size: 20px;
+  }
+  .text2 {
+    font-size: 24px;
+  }
+  .blue {
+    color: blue;
   }
