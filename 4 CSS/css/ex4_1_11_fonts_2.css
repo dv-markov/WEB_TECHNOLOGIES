@@ -1,18 +1,35 @@
-body {
-    font-family: 'SofiaSans';
-    font-size: 24px;
-}
-
 @font-face {
     font-family: 'SofiaSans';
     src: url(../fonts/Sofia_Sans/SofiaSans-VariableFont_wght.ttf);
 }
 
 @font-face {
-    font-family: 'SofiaSans_Italic';
+    font-family: 'SofiaSansItalic';
     src: url(../fonts/Sofia_Sans/SofiaSans-Italic-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Roboto"),
+         /* Если не получилось, загрузит woff2 */
+         url("../fonts//Roboto/Roboto.woff2") format("woff2"),
+         /* Если браузер не поддерживает woff2, загрузит woff */
+         url("../fonts//Roboto/Roboto.woff") format("woff");
+  }
+
+body {
+    font-family: 'SofiaSans';
+    font-size: 24px;
+}
+
 .italic {
-    font-family: 'SofiaSans_Italic';
+    font-family: 'SofiaSansItalic';
+    font-style: italic;
+}
+
+.roboto {
+    font-family: 'Roboto', 'Arial', sans-serif;
 }
