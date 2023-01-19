@@ -1,0 +1,18 @@
+body {
+    font-family: 'SofiaSans';
+    font-size: 24px;
+}
+
+@font-face {
+    font-family: 'SofiaSans';
+    src: url(../fonts/Sofia_Sans/SofiaSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'SofiaSans_Italic';
+    src: url(../fonts/Sofia_Sans/SofiaSans-Italic-VariableFont_wght.ttf);
+}
+
+.italic {
+    font-family: 'SofiaSans_Italic';
+}
