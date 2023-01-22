@@ -90,3 +90,33 @@ a {
 .align4 {
     text-align: justify;
 }
+/* background-color */
+.b-color1 {
+    background-color: #fa9900;
+}
+.b-color2 {
+    background-color: rgb(250, 247, 128);
+}
+.b-color3 {
+    background-color: rgba(250, 247, 128, 0.5);
+}
+/* line-height */
+.lh1 {
+    line-height: normal;
+}
+.lh2 {
+    line-height: 32px;
+}
+.lh3 {
+    line-height: 10px;
+}
+/* word-break */
+.wb1 {
+    word-break: normal;
+}
+.wb2 {
+    word-break: break-all;
+}
+.wb3 {
+    word-break: keep-all;
+}
