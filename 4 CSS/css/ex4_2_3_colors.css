@@ -9,3 +9,90 @@
     color: rgba(255, 0, 0, 0.5);
 }
 
+/* background-color */
+div {
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+}
+.bkg-color1 {
+    background-color: #cddc39;
+}
+.bkg-color2 {
+    background-color: rgba(59, 195, 74, 0.7);
+}
+.bkg-color3 {
+    background-color: hsla(212, 61%, 47%, 0.8);
+}
+
+/* background-image */
+.bkg-img1 {
+    background-image: url("https://images.unsplash.com/photo-1462965326201-d02e4f455804?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80");
+}
+.bkg-img2 {
+    background-image: url("https://images.unsplash.com/photo-1601148072347-4c63fe45bd33?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+    background-position: center;
+    background-size: 200px auto;
+}
+.bkg-img3 {
+    background: url("https://images.unsplash.com/photo-1609940539397-3fa778baf74a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+    background-attachment: fixed;
+    /* background-position: top; */
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+}
+
+/* gradients */
+.simple-linear {
+    background: linear-gradient(blue, pink);
+}
+.stacked-linear {
+    background:
+        linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+        linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+.stacked-radial {
+    background:
+        radial-gradient(circle at 50% 0,
+          rgba(255,0,0,.5),
+          rgba(255,0,0,0) 70.71%),
+        radial-gradient(circle at 6.7% 75%,
+          rgba(0,0,255,.5),
+          rgba(0,0,255,0) 70.71%),
+        radial-gradient(circle at 93.3% 75%,
+          rgba(0,255,0,.5),
+          rgba(0,255,0,0) 70.71%) beige;
+    border-radius: 50%;
+}
+.conic-gradient {
+    background: conic-gradient(at 0% 30%, red 10%, yellow 30%, #1e90ff 50%);
+}
+.multi-repeating-linear {
+    background:
+        repeating-linear-gradient(190deg, rgba(255, 0, 0, 0.5) 40px,
+          rgba(255, 153, 0, 0.5) 80px, rgba(255, 255, 0, 0.5) 120px,
+          rgba(0, 255, 0, 0.5) 160px, rgba(0, 0, 255, 0.5) 200px,
+          rgba(75, 0, 130, 0.5) 240px, rgba(238, 130, 238, 0.5) 280px,
+          rgba(255, 0, 0, 0.5) 300px),
+        repeating-linear-gradient(-190deg, rgba(255, 0, 0, 0.5) 30px,
+          rgba(255, 153, 0, 0.5) 60px, rgba(255, 255, 0, 0.5) 90px,
+          rgba(0, 255, 0, 0.5) 120px, rgba(0, 0, 255, 0.5) 150px,
+          rgba(75, 0, 130, 0.5) 180px, rgba(238, 130, 238, 0.5) 210px,
+          rgba(255, 0, 0, 0.5) 230px),
+        repeating-linear-gradient(23deg, red 50px, orange 100px,
+          yellow 150px, green 200px, blue 250px,
+          indigo 300px, violet 350px, red 370px);
+}
+.dawn-img {
+    width: 400px;
+    height: 400px;
+    background-image: url("https://lh3.googleusercontent.com/y_4d6-z6CloXo94JEgSyQEJ1OKRD5ZMc698AbBYkK6xeig30NlHFd788R21KWqD6qtkFkeow2nGTTJedsYiBM_5HYhvSevaGkh5QzrQI_WJAYAlLij9ujFMWPrdqP66O2vvq8lFWRqtndJogG-UXra59N3Lekuf9trKWYV3W20I2fuCMPf8l2RDPpezjkcmMXHGkqwufb5F8OueZ8oXcBwZ3cKXjL1GByQ491rTw3R3G14ycgt3OUJ1Ps1XwsU7bez4qUIUva8Zn35agX2fXC0jdaNrWGbjbO-NgLPSYFwUctd8HLFAZWfkucTjl5l6PygYMOcPqxdEMlQ1J_K2--ggC7VqERt9LMDD1FFKAHHaYcOts99UVqgE8CxJRALYO5N4TKcxW-WMI-jYChM1P9nrUZuY_GeqELZfB8XQXf2O0UJvau9kpJLE0Mzy_Xz987VL1p5rxKIFR1EDymVPoupJ3rAF2LgXY1r_j7tSu_0ABOtUYqWuYnGVz43RgNHJZDY8FBvsrLgYeCAidULk1rnZ2SWqTcneZrGlueIE4kMzmKI7RAWTSxSE1YtaQlTmsbzO4ePYcgpjIZFGZFuXL-1xFHVR7Eq6zU65jtPetgxk-N83q0lRfM3yv1EbJqLptP8PG1MLItNKOwNyJwBigjIxwOfV_bkJG8oK3MBnCFGqK_Vdk6WIhacz2t4UPs4FGZYXI6GMltb7AwMm7TrSwRq6eNHGk-svJmE5x4RBggCDFNgxg9K2CLLNYDyGDUknr1kU8GbhsXuXBLsyJUO2cW4ckQ08DiP3q9lT8VO5PtLnr5h17p7D4R3ppnuOUh-WyVZBEmB22n48TqK-n8ye_16OEtxhY7ZXPlN5fqkbYDdeitv7AZbZhCUA-_cTZyosBNgADDH5JuUECTKtk7ubiVQJOb1q-Q86CZEutpUyGi-OL5NbBbR1IxQRfqXu0xg8HPBgRDeTslnkegOP-MlFBYPMzVuwdhq2-ayGCu8mUpTMPq3InRXYmuHM=w700-h456-no?authuser=0");
+    background-size: auto 400px;
+    background-position: center;
+}
+.dawn {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(darkblue, darkviolet, orangered 80%, orange 85% 89%, black 90%);
+}
