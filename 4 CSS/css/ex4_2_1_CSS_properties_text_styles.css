@@ -1,0 +1,21 @@
+body {
+    font-size: 20px;
+}
+.font1 {
+    font-family: serif;
+}
+.font2 {
+    font-family: sans-serif;
+}
+.font3 {
+    font-family: cursive;
+}
+.font4 {
+    font-family: 'Open Sans', sans-serif;
+}
+.font5 {
+    font-family: 'Roboto Mono', monospace;
+}
+.font-size {
+    font-size: 14px;
+}
