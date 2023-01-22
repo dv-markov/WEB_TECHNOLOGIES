@@ -1,6 +1,7 @@
 body {
     font-size: 20px;
 }
+/* font-family */
 .font1 {
     font-family: serif;
 }
@@ -16,6 +17,76 @@ body {
 .font5 {
     font-family: 'Roboto Mono', monospace;
 }
+/* font-size */
 .font-size {
     font-size: 14px;
+}
+a {
+    font-size: 24px;
+}
+/* font-weight */
+.fw100 {
+    font-weight: 100;
+}
+.fw700 {
+    font-weight: 700;
+}
+/* text-decoration */
+.underline {
+    text-decoration: underline;
+}
+.wavy {
+    text-decoration: underline wavy blue;
+}
+.dotted-red {
+    text-decoration: underline dotted #ff00ff;
+}
+.dec-none {
+    text-decoration: none;
+}
+/* color */
+.color1 {
+    color: red;
+}
+.color2 {
+    color: #00FF00
+}
+.color3 {
+    color: rgb(0, 0, 255)
+}
+/* text-transform */
+.text1 {
+    text-transform: uppercase;
+}
+.text2 {
+    text-transform: lowercase;
+}
+.text3 {
+    text-transform: capitalize;
+}
+/* text-shadow */
+.shadow1 {
+    color: #402276;
+    text-shadow: 1px 1px 5px pink;
+}
+.shadow2 {
+    color: #402276;
+    text-shadow: 5px 5px #222cff;
+}
+.shadow3 {
+    text-shadow: 0 0 20px yellow,
+                2px 0 #222cff;
+}
+/* text-align */
+.align1 {
+    text-align: left;
+}
+.align2 {
+    text-align: right;
+}
+.align3 {
+    text-align: center;
+}
+.align4 {
+    text-align: justify;
 }
