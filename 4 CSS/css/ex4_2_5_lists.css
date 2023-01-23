@@ -1,0 +1,18 @@
+body {
+    font-size: 20px;
+}
+.ls-type {
+    list-style-type: square;
+}
+.ls-image {
+    list-style-image: url("https://images.unsplash.com/photo-1628260412297-a3377e45006f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=35&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY3NDQ5OTk2Nw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=35");
+}
+.ls-pos1 {
+    list-style-position: inside;
+}
+.ls-pos2 {
+    list-style-position: outside; /* default */
+}
+.ls1 {
+    list-style: '😎';
+}
