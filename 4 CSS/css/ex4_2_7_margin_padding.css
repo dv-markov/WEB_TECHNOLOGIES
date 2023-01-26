@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div {
+    text-align: center;
+    width: 200px;
+    background-color: #009678;
+    margin: 10px;
+    padding: 30px;
+}
+/* margin and padding sequence - top, right, bottom, left */
+.container1 {
+    width: auto;
+    text-align: center;
+    background-color: #c1c1eb;
+    margin: 0 200px;
+    padding: 100px 50px;
+}
+.container2 {
+    width: auto;
+    text-align: center;
+    background-color: #c1c1eb;
+    margin-top: 10px;
+    margin-right: 200px;
+    margin-bottom: 0;
+    margin-left: 200px;
+    /* equal to margin: 10px 200px 0 200px */
+    /* equal to margin: 10px 200px 0 */
+}
