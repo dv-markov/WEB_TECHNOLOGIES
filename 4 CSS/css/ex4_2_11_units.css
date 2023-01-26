@@ -1,0 +1,33 @@
+body {
+    overflow-wrap: break-word;
+}
+.fixed_units {
+    background-color: #009688;
+    width: 60px;
+    /* word-break: break-word; */
+}
+.percentage_units {
+    font-size: 24px;
+    background: #098765;
+    width: 80%;
+}
+div {
+    width: 80%;
+}
+
+/* Если у элемента есть свойство box-sizing: border box, задана ширина/высота, то толщина рамки будет входить в значение ширины/высоты, но если свойство box-sizing: border box не задано, то к ширине/высоте самого элемента добавится толщина рамки.  */
+.bb {
+    background-color: #098765;
+    font-size: 24px;
+    width: 10em;
+    box-sizing: border-box;
+    border: 10px solid #077a6f;
+    border-radius: 0.3em;
+}
+.no-bb {
+    background-color: #098765;
+    font-size: 24px;
+    width: 10em;
+    border: 10px solid #077a6f;
+    border-radius: 0.3em;
+}
