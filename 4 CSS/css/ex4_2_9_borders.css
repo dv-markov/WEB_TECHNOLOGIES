@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Свойство CSS border определяет рамку для всех четырёх сторон элемента. Также можно задать свойство для конкретной стороны: border-top, border-right, border-bottom и border-left.
+
+Стандартно в значения входит: толщина стиль цвет. Но также каждое из этих значений можно определить своим свойством border-width, border-style, и border-color.
+
+Толщина указывается в px или других единицах измерения. Стиль может быть solid (сплошная), dotted (пунктирная), dashed (пунктирная длинная), double и другие. Форматы цвета уже объяснялись ранее. */
+.container {
+    text-align: center;
+    background-color: #c1c1eb;
+    padding: 20px;
+    margin: 50px;
+}
+.c1 {
+    border: 5px solid #0e0e9a;
+}
+.c2 {
+    border-top: 5px ridge #0e0e9a;
+    border-bottom: 5px groove #0e0e9a;
+    border-right: 5px double #5a5af7;
+    border-left: 5px dashed #5a5af7;
+}
+
+/* Кстати свойство border удобно применять чтобы увидеть на экране нужный класс. Добавили границу, отредактировали стили класса, убрали границу :) */
