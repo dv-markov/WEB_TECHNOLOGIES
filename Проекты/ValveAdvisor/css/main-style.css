@@ -5,16 +5,95 @@
 body {
     font-family: Roboto, sans-serif;
     font-style: normal;
+    background-color: whitesmoke;
+}
+.container {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+
 }
 .nav {
     background-color: rgb(5, 74, 143);
     color: aliceblue;
     font-weight: 500;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    height: 4em;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    font-size: 24px;
+    height: auto;
+    justify-content: space-between;
 }
 .logo {
     margin-right: 50px;
+    margin-left: 25px;
     padding: 10px;
+    font-size: 36px;
+    line-height: 32px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border: 2px solid white;
+}
+.menu {
+    font-size: 24px;
+    text-transform: uppercase;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 5px solid white; */
+}
+.menu-li {
+    padding: 10px;
+}
+.link {
+    text-decoration: none;
+    color: aliceblue;
+}
+.link:hover{
+    color: rgb(114, 173, 240);
+}
+.main-part {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+.block {
+    min-width: 316px;
+    width: 50%;
+    max-width: 100%;
+    min-height: 300px;
+    font-size: 24px;
+    font-weight: 400px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-data {
+    background-color: darkolivegreen;
+}
+.results {
+    background-color: darkkhaki;
+}
+.service-data {
+    background-color: darkslategray;
+    min-width: 600px;
+    width: 100%;
+}
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(5, 74, 143);
+    font-size: 24px;
+    font-weight: 400px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
