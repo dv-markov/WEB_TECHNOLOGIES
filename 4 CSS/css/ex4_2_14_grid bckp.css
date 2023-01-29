@@ -57,13 +57,10 @@ fr (от fraction — доля, часть) отвечает за свободн
   grid-template-columns: 1fr 200px 1fr;
 }
 
-/* grid reset */
-.container {
-    grid-template-columns: none;
-}
 
 /* grid-auto-columns, grid-auto-rows */
 .container {
+    clear: both;
     display: grid;
     grid-template-rows: 50px 150px;
     grid-auto-rows: 15px;
@@ -77,23 +74,3 @@ fr (от fraction — доля, часть) отвечает за свободн
   .item:nth-child(n + 3) {
     background: pink;
   }
-
-/* Можно задавать больше одного значения для автоматических колонок или рядов. Тогда паттерн размера будет повторяться до тех пор, пока не кончатся грид-элементы. */
-.container {
-    grid-template-columns: none;
-    display: grid;
-    grid-template-columns: 50px 150px;
-    grid-auto-columns: 15px 25px 5px;
-    grid-auto-flow: column;
-    gap: 10px;
-}
-
-.item {
-    min-height: 50px;
-    background: lightblue;
-}
-
-.item:nth-child(n + 3) {
-    background: pink;
-}
-
