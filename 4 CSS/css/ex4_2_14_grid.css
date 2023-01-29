@@ -1,16 +1,18 @@
-/* column-gap, row-gap
-Задаёт отступы между колонками или рядами. */
+/* align-items
+
+Свойство, с помощью которого можно выровнять элементы по вертикальной оси внутри грид-контейнера.
+Возможные значения:
+start — выравнивает элемент по начальной (верхней) линии. */
+.item {
+  min-height: 100px;
+  min-width: 100px;
+  background-color: green;
+}
 
 .container {
   display: grid;
   grid-template-columns: 1fr 200px 1fr;
   grid-template-rows: repeat(3, 150px);
-  /* Отступы между колонками */
-  column-gap: 10px;
-  /* Отступы между рядами */
-  row-gap: 50px;
-}
-
-.item {
-    background-color: darkblue;
+  gap: 20px;
+  place-items: end center;
 }

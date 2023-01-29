@@ -282,3 +282,49 @@ CLR*/
 .item {
     background-color: darkblue;
 }
+
+/* justify-items
+Свойство, с помощью которого задаётся выравнивание грид-элементов по горизонтальной оси. Применяется ко всем элементам внутри грид-родителя.
+Возможные значения:
+start — выравнивает элемент по начальной (левой для LTR) линии. */
+.item {
+  min-width: 150px;
+  background-color: blueviolet;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  grid-template-rows: repeat(3, 150px);
+  gap: 20px;
+  justify-items: start; /* end; center; stretch*/
+}
+/* Можно управлять выравниванием отдельных грид-элементов при помощи свойства justify-self. */
+
+/* align-items
+
+Свойство, с помощью которого можно выровнять элементы по вертикальной оси внутри грид-контейнера.
+Возможные значения:
+start — выравнивает элемент по начальной (верхней) линии. */
+.item {
+  min-height: 100px;
+  background-color: coral;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  grid-template-rows: repeat(3, 150px);
+  gap: 20px;
+
+  align-items: start; /* end; center; stretch*/
+}
+
+
+/* place-items
+Шорткат для указания значений сразу и для align-items и для justify-items. Указывать нужно именно в таком порядке. */
+.container {
+  display: grid;
+  place-items: stretch / end;
+}
+
+
