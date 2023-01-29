@@ -5,6 +5,7 @@
 .boxes{ 
     display: flex;
     justify-content: center; 
+    flex-wrap: wrap;
 }
 .box-large{
     width: 500px;
