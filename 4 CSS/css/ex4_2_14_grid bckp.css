@@ -265,3 +265,20 @@ CLR*/
   grid-area: footer;
   background-color: brown;
 }
+
+
+/* column-gap, row-gap
+Задаёт отступы между колонками или рядами. */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  grid-template-rows: repeat(3, 150px);
+  /* Отступы между колонками */
+  column-gap: 10px;
+  /* Отступы между рядами */
+  row-gap: 50px;
+}
+
+.item {
+    background-color: darkblue;
+}

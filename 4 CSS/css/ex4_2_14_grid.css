@@ -1,36 +1,16 @@
-/* grid-template
+/* column-gap, row-gap
+Задаёт отступы между колонками или рядами. */
 
-Свойство-шорткат для свойств grid-template-rows, grid-template-columns. Позволяет записать все значения в одну строку. Главное после этого не запутаться при чтении 😅
-Можно прописать все колонки и ряды сразу, разделяя их слэшем /. Сперва идут ряды, а затем колонки, не перепутайте! */
 .container {
-    display: grid;
-    grid-template:
-    [row1-start] "header header header" 25px [row1-end]
-    [row2-start] "footer footer footer" 25px [row2-end]
-    / auto 50px auto;
-    gap: 10px;
-  }
-
-/* Эквивалентная запись */
-.container {
-    display: grid;
-    grid-template:
-        [row1-start] 25px [row1-end]
-        [row2-start] 25px [row2-end]
-        / auto 50px auto;
-    grid-template-areas:
-        "header header header"
-        "footer footer footer";
-    gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  grid-template-rows: repeat(3, 150px);
+  /* Отступы между колонками */
+  column-gap: 10px;
+  /* Отступы между рядами */
+  row-gap: 50px;
 }
 
-
-.item1 {
-    grid-area: header;
-    background-color: purple;
-}
-
-.item2 {
-    grid-area: footer;
-    background-color: brown;
+.item {
+    background-color: darkblue;
 }
