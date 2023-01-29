@@ -1,18 +1,120 @@
-/* align-items
+/* grid
+Мегашорткат, позволяющий задать значения всему и сразу. А конкретно с его помощью можно указать значения для следующих свойств:
+grid-template-rows
+grid-template-columns
+grid-template-areas
+grid-auto-rows
+grid-auto-columns
+grid-auto-flow */
 
-Свойство, с помощью которого можно выровнять элементы по вертикальной оси внутри грид-контейнера.
+/* Перед тем как соблазниться возможностью расписать всё в одном свойстве, дважды (а то и трижды) подумайте о читабельности кода. Учтите и то, что гриды относительно новая и не такая уж простая технология. Не каждый коллега сможет прочесть этот шорткат.
+
 Возможные значения:
-start — выравнивает элемент по начальной (верхней) линии. */
-.item {
-  min-height: 100px;
-  min-width: 100px;
-  background-color: green;
-}
+none — значение по умолчанию. Это ключевое слово сбрасывает значения для всех свойств, входящих в этот шорткат. */
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 200px 1fr;
-  grid-template-rows: repeat(3, 150px);
-  gap: 20px;
-  place-items: end center;
+  grid: none;
+}
+
+.item {
+    background-color: darkolivegreen;
+}
+
+/* Можно указать допустимые значения для шортката grid-template: */
+.container {
+    display: grid;
+    grid: repeat(4, 150px) / 1fr 200px 1fr;
+    gap: 10px;
+}
+
+/* В том числе можно указать имена линий: */
+.container {
+    display: grid;
+    grid:
+      [row1-start] 25px [row1-end row2-start] 25px [row2-end] /
+      auto 50px auto;
+  }
+
+  /* Можно задать размеры колонок и рядов. Создадим два ряда и две колонки: */
+.container {
+    display: grid;
+    grid: 200px 100px / 30% 30%;
+}
+
+/* auto-flow — это ключевое слово даёт браузеру понять, что создавать при необходимости: колонки или ряды.
+Если auto-flow стоит справа от слэша, то будут создаваться автоматические колонки: */
+.container {
+    display: grid;
+    grid: 200px 100px / auto-flow 30%;
+}
+  
+/* Если auto-flow стоит слева от слэша, то будут создаваться автоматические ряды: */
+.container {
+    display: grid;
+    grid:  auto-flow 30% / 200px 100px;
+}
+
+
+/* dense — к ключевому слову auto-flow можно добавить dense. Это укажет браузеру, что элементы должны стараться заполнить свободные ячейки. Подробнее про работу этого ключевого слова можно почитать в статье про grid-auto-flow.
+Важно ставить это слово сразу после auto-flow: */
+.container {
+  display: grid;
+  grid:  auto-flow dense 30% / 200px 100px;
+}
+
+/* Ниже будет несколько примеров с блоками кода, которые делают одно и то же, в первом случае через шорткат, во втором — как обычно.
+Задаёт размеры и количество колонок и рядов: */
+.container {
+  grid: 50px 150px / 2fr 1fr;
+}
+.container {
+  grid-template-rows: 50px 150px;
+  grid-template-columns: 2fr 1fr;
+}
+
+/* Задаёт размеры и количество рядов, а также автоматические колонки: */
+.container {
+  grid: 200px 1fr / auto-flow 200px;
+}
+.container {
+  grid-auto-flow: column;
+  grid-template-rows: 200px 1fr;
+  grid-auto-columns: 200px;
+}
+
+/* Задаёт размеры и количество рядов, автоматические колонки и распределение dense: */
+.container {
+  grid: auto-flow dense 300px / 2fr 3fr;
+}
+.container {
+  grid-auto-flow: row dense;
+  grid-auto-rows: 300px;
+  grid-template-columns: 2fr 3fr;
+}
+
+/* Возможны и более сложные комбинации значений этого свойства. Например, можно сразу задать имена областям: */
+.container {
+  grid:
+    [row1-start] "header header header" 1fr [row1-end]
+    [row2-start] "footer footer footer" 25px [row2-end]
+    / auto 50px auto;
+}
+/* Что соответствует такому коду: */
+.container {
+  grid-template-areas:
+    "header header header"
+    "footer footer footer";
+  grid-template-rows: [row1-start] 1fr [row1-end row2-start] 25px [row2-end];
+  grid-template-columns: auto 50px auto;
+}
+
+.item1 {
+    grid-area: header;
+    background-color: indianred;
+}
+
+.item2 {
+    grid-area: footer;
+    background-color: indigo;
 }
