@@ -1,0 +1,27 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 200px;
+    grid-auto-rows: 100px;
+    gap: 10px;
+}
+
+.item {
+    background-color: lightgray;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* The most common screen width values for media queries to create a responsive web design are as follows:
+max-width: 576px: Used for small screens such as smartphones in portrait mode.
+min-width: 576px and max-width: 768px: Used for small screens such as smartphones in landscape mode and some small tablets.
+min-width: 768px and max-width: 992px: Used for medium-sized screens such as larger tablets and small laptops.
+min-width: 992px and max-width: 1200px: Used for larger screens such as laptops and desktops.
+min-width: 1200px: Used for very large screens such as large desktops and multiple monitor setups.
+These values are based on common screen sizes for devices, but it's important to keep in mind that screen sizes can vary greatly and these values may not be suitable for all designs. It's a good practice to use a range of media queries to target different devices and viewport sizes. */
+  
