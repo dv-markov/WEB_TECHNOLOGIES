@@ -16,8 +16,21 @@ a {
 }
 
 a:hover {
-    /* text-decoration: underline; */
     color: dimgray;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 53px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    white-space: nowrap;
 }
 
 .header {
@@ -31,13 +44,13 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid #000000; */
 }
 
 .menu__logo {
     font-weight: 500;
     font-size: 36px;
     line-height: 53px;
+    white-space: nowrap;
 }
 
 .menu__ul {
@@ -53,8 +66,8 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-image: url("https://images.unsplash.com/photo-1494415859740-21e878dd929d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"); */
-    background-image: url("../static/img/01photo-1494415859740-21e878dd929d.avif");
+    background-image: url("https://images.unsplash.com/photo-1494415859740-21e878dd929d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80");
+    /* background-image: url("../static/img/01photo-1494415859740-21e878dd929d.avif"); */
     background-size: cover;
     background-position: center;
     /* как увеличить изображение и поднять выше ? */
@@ -86,12 +99,9 @@ a:hover {
     align-items: center;
 }
 
-.story__header {
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 53px;
-    text-transform: uppercase;
-}
+/* .story__header {
+
+} */
 
 .story__content {
     padding-top: 60px;
@@ -105,13 +115,14 @@ a:hover {
     width: 46%;
     max-width: 600px;
     height: 400px;
-    background-image: url("../static/img/02photo-1507915135761-41a0a222c709.avif");
+    /* background-image: url("../static/img/02photo-1507915135761-41a0a222c709.avif"); */
+    background-image: url("https://images.unsplash.com/photo-1507915135761-41a0a222c709?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80");
     background-size: cover;
     background-position: center;
 }   
 
 .story__text {
-    padding-left: 3%;
+    padding-left: 4%;
     width: 46%;
     font-weight: 300;
     font-size: 20px;
@@ -120,43 +131,74 @@ a:hover {
 
 .blog {
     height: 711px;
-    border: 1px solid black;
     background: #EFEFEF;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: start;
+    border: 1px solid black;
 }
 
 .blog__header {
-    margin: 60px auto;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 53px;
-    text-transform: uppercase;
+    margin: 60px 0;
 }
 
 .blog__content {
+    margin-bottom: 64px;
     width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
     display: flex;
     justify-content: space-around;
-    border: 1px solid black;
 }
 
 .blog__card {
     width: 28%;
+    max-width: 365px;
     height: 474px;
     background: #FFFFFF;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    align-items: start;
+}
+
+.card__header {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.card__image {
+    margin: 24px 20px;
+    width: 89%;
+    max-width: 325px;
+    height: 216px;
+    background-size: cover;
+    background-position: center;
+    image-rendering: optimizeSpeed;
+}
+
+.card__image.img-1 {
+    background-image: url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+}
+
+.card__image.img-2 {
+    background-image: url("https://images.unsplash.com/photo-1455470956270-4cbb357f7052?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+}
+
+.card__image.img-3 {
+    background-image: url("https://images.unsplash.com/photo-1461988091159-192b6df7054f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
 }
 
 
 
+.card__text {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+}
+
 .contact {
     height: 337px;
-    border: 1px solid black;
     background: #FFFFFF;
     display: flex;
     justify-content: center;
