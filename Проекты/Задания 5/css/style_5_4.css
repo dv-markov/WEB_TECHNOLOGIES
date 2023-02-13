@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    color: #000000;
+    background-color: dimgrey;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+a:hover {
+    /* text-decoration: underline; */
+    color: dimgray;
+}
+
+.header {
+    height: 110px;
+    background: #FFFFFF;
+}
+
+.menu {
+    height: 100%;
+    margin: auto 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid #000000; */
+}
+
+.menu__logo {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 53px;
+}
+
+.menu__ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    gap: 46px;
+}
+
+.home {
+    height: 622px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url("https://images.unsplash.com/photo-1494415859740-21e878dd929d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"); */
+    background-image: url("../static/img/01photo-1494415859740-21e878dd929d.avif");
+    background-size: cover;
+    background-position: center;
+    /* как увеличить изображение и поднять выше ? */
+    /* текст должен идти по внешней ближней стороне кружки, а не пересекать ее верхнюю границу */
+}
+
+.home__text {
+    /* как сделать, чтобы по вертикали по центру выравнивался только текст, но не вместе со следующим элементом (линией) ??? */
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 89px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.home__line {
+    margin-top: 7px;
+    width: 80px;
+    height: 10px;
+    background: #817070;
+}
+
+.story {
+    height: 632px;
+    padding: 60px 5%;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story__header {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 53px;
+    text-transform: uppercase;
+}
+
+.story__content {
+    padding-top: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.story__image {
+    width: 46%;
+    max-width: 600px;
+    height: 400px;
+    background-image: url("../static/img/02photo-1507915135761-41a0a222c709.avif");
+    background-size: cover;
+    background-position: center;
+}   
+
+.story__text {
+    padding-left: 3%;
+    width: 46%;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.blog {
+    height: 711px;
+    border: 1px solid black;
+    background: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog__header {
+    margin: 60px auto;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 53px;
+    text-transform: uppercase;
+}
+
+.blog__content {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+
+.blog__card {
+    width: 28%;
+    height: 474px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column
+}
+
+
+
+.contact {
+    height: 337px;
+    border: 1px solid black;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: 72px;
+    border: 1px solid black;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
