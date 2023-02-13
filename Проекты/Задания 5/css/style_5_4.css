@@ -6,12 +6,10 @@
 body {
     font-family: 'Oswald', sans-serif;
     color: #000000;
-    background-color: dimgrey;
 }
 
 a {
     text-decoration: none;
-    text-transform: uppercase;
     color: #000000;
 }
 
@@ -50,6 +48,7 @@ h3 {
     font-weight: 500;
     font-size: 36px;
     line-height: 53px;
+    text-transform: uppercase;
     white-space: nowrap;
 }
 
@@ -58,6 +57,7 @@ h3 {
     display: flex;
     justify-content: end;
     gap: 46px;
+    text-transform: uppercase;
 }
 
 .home {
@@ -67,7 +67,6 @@ h3 {
     align-items: center;
     justify-content: center;
     background-image: url("https://images.unsplash.com/photo-1494415859740-21e878dd929d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80");
-    /* background-image: url("../static/img/01photo-1494415859740-21e878dd929d.avif"); */
     background-size: cover;
     background-position: center;
     /* как увеличить изображение и поднять выше ? */
@@ -115,7 +114,6 @@ h3 {
     width: 46%;
     max-width: 600px;
     height: 400px;
-    /* background-image: url("../static/img/02photo-1507915135761-41a0a222c709.avif"); */
     background-image: url("https://images.unsplash.com/photo-1507915135761-41a0a222c709?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80");
     background-size: cover;
     background-position: center;
@@ -136,7 +134,6 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    border: 1px solid black;
 }
 
 .blog__header {
@@ -151,8 +148,7 @@ h3 {
 }
 
 .blog__card {
-    width: 28%;
-    max-width: 365px;
+    width: 365px;
     height: 474px;
     background: #FFFFFF;
     display: flex;
@@ -167,8 +163,7 @@ h3 {
 
 .card__image {
     margin: 24px 20px;
-    width: 89%;
-    max-width: 325px;
+    width: 325px;
     height: 216px;
     background-size: cover;
     background-position: center;
@@ -187,8 +182,6 @@ h3 {
     background-image: url("https://images.unsplash.com/photo-1461988091159-192b6df7054f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
 }
 
-
-
 .card__text {
     padding-left: 20px;
     padding-right: 20px;
@@ -199,17 +192,91 @@ h3 {
 
 .contact {
     height: 337px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #817070;
+    border: 1px solid black;
+}
+
+.contact-header {
+    color: #FFFFFF;
+}
+
+.contact-input {
+    width: 300px;
+    height: 55px;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #817070;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+}
+
+.contact-input::placeholder {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.contact-input:focus {
+    /* outline: 1px solid dimgray; */
+    /* outline: dimgray */
+    /* border: 3px solid dimgray; */
+    outline: none;
+    border-color: #EFEFEF;;
+    box-shadow: 0 0 5px #EFEFEF;;
+}
+
+.contact-button {
+    width: 129px;
+    height: 55px;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #817070;
+    text-transform: uppercase;
+    background: #FFFFFF;
+    /* border: 3px solid #FFFFFF; */
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.contact-button:active {
+    background-color: #817070;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.footer {
+    height: 72px;
     background: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer {
-    height: 72px;
-    border: 1px solid black;
-    background: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.footer__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
 }
