@@ -55,5 +55,6 @@ console.log(user.age)
 user.name = "Петр";
 console.log(user.name)
 
-// выыедет тип объекта
+// при вызове для объекта функция alert выдает тип объекта
 alert(user)
+
