@@ -1,0 +1,9 @@
+.border {
+    border: 5px solid rgb(16, 179, 151);
+    border-radius: 10px;
+}
+
+.border2 {
+    border: 1px dotted salmon;
+    border-radius: 5px;
+}
