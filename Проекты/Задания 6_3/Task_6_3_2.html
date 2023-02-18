@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 6.3.5 Checkbox</title>
+    <style>
+        label{display:inline-block; width: 200px;}
+        div{margin-bottom: 20px;}
+    </style>
+</head>
+<body>
+    <p>Выберите товары:</p>
+    <div>
+        <input type="checkbox" id="contactChoice1" name="deserts" value="120">
+        <label for="contactChoice1">Пирог с яблоком - 120 р.</label>
+    </div>
+    <div>
+        <input type="checkbox" id="contactChoice2" name="deserts" value="80">
+        <label for="contactChoice2">Шоколадный кекс - 80 р.</label>
+    </div>
+    <div>
+        <input type="checkbox" id="contactChoice3" name="deserts" value="180">
+        <label for="contactChoice3">Чизкейк - 180 р.</label>
+    </div>
+    <button class="btn">Выбрать</button>
+    <p>Общая стоимость: <span class="result"></span></p>
+
+    <script src="js/task_6_3_2.js"></script>
+</body>
+</html>
