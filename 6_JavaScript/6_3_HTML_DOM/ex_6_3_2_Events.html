@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 6.3.2 Events</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- использование атрибута HTML -->
+    <input value="Нажми меня" onclick="alert('Клик!')" type="button">
+
+    <!-- код с аналогичным функционалом и отображение в DOM -->
+    <!-- задание id в теге, позволяет обращаться по этому id через JS -->
+    <input id="elem" type="button" value="Нажми меня!">
+    <script>
+        // DOM-свойства чувствительны у регистру
+        elem.onclick = function() {
+            alert('Спасибо');
+        };
+
+        // аналогично можно ссылаться на ранее объявленную функцию
+        // function sayThanks() {
+        //     alert('Спасибо!');
+        //     }
+        // elem.onclick = sayThanks;
+    </script>
+
+    <!-- Доступ к элементу через this -->
+    <button onclick="alert(this.innerHTML)">Ссылка на текст через innerHTML</button>
+
+    <!-- оставльные примеры в JS -->
+    <button onclick="myFunction()">Нажмите кнопку</button>
+    <button class="btn">Кнопка</button>
+    <button class="btn2">Еще одна кнопка</button>
+    <button class="btn2">И еще одна</button>
+
+    <!-- объект события -->
+    <!-- https://learn.javascript.ru/introduction-browser-events#obekt-sobytiya -->
+    <h2>Обработчик объекта события event:</h2>
+    <input type="button" value="Нажми меня" id="elem1">
+    <script>
+    elem1.onclick = function(event) {
+        // вывести тип события, элемент и координаты клика
+        alert(event.type + " на " + event.currentTarget);
+        alert("Координаты: " + event.clientX + ":" + event.clientY);
+    };
+    </script>
+
+    <h2>Объект-обработчик: handleEvent</h2>
+    <h3>Через метод объекта handleEvent</h3>
+    <button id="elem2">Нажми меня</button>
+    <script>
+        elem2.addEventListener('click', {
+            handleEvent(event) {
+            alert(event.type + " на " + event.currentTarget);
+            }
+        });
+    </script>
+
+    <h3>Через класс</h3>
+    <button id="elem3">Нажми меня</button>
+    <script>
+        class Menu {
+            handleEvent(event) {
+            switch(event.type) {
+                case 'mousedown':
+                elem3.innerHTML = "Нажата кнопка мыши";
+                break;
+                case 'mouseup':
+                elem3.innerHTML += "...и отжата.";
+                break;
+            }
+            }
+        }
+        let menu = new Menu();
+        elem3.addEventListener('mousedown', menu);
+        elem3.addEventListener('mouseup', menu);
+    </script>
+
+    <h3>Через вызов других методов</h3>
+    <button id="elem4">Нажми меня</button>
+    <script>
+        class Menu2 {
+            handleEvent(event) {
+            // mousedown -> onMousedown
+            let method = 'on' + event.type[0].toUpperCase() + event.type.slice(1);
+            this[method](event);
+            }
+
+            onMousedown() {
+            elem4.innerHTML = "Кнопка мыши нажата";
+            }
+
+            onMouseup() {
+            elem4.innerHTML += "...и отжата.";
+            }
+        }
+
+        let menu2 = new Menu2();
+        elem4.addEventListener('mousedown', menu2);
+        elem4.addEventListener('mouseup', menu2);
+    </script>
+
+    <!-- Есть три способа назначения обработчиков событий:
+
+    Атрибут HTML: onclick="...".
+    DOM-свойство: elem.onclick = function.
+    Специальные методы: elem.addEventListener(event, handler[, phase]) для добавления, removeEventListener для удаления.
+    HTML-атрибуты используются редко потому, что JavaScript в HTML-теге выглядит немного странно. К тому же много кода там не напишешь.
+
+    DOM-свойства вполне можно использовать, но мы не можем назначить больше одного обработчика на один тип события. Во многих случаях с этим ограничением можно мириться.
+
+    Последний способ самый гибкий, однако нужно писать больше всего кода. Есть несколько типов событий, которые работают только через него, к примеру transitionend и DOMContentLoaded. Также addEventListener поддерживает объекты в качестве обработчиков событий. В этом случае вызывается метод объекта handleEvent.
+
+    Не важно, как вы назначаете обработчик – он получает объект события первым аргументом. Этот объект содержит подробности о том, что произошло. -->
+
+    <script src="js/ex_6_3_2.js"></script>
+</body>
+</html>

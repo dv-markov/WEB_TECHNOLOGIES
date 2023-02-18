@@ -24,6 +24,7 @@ elem2[0].classList.add('border');
 // querySelector('a[href="site.com"]')- первый элемент a c атрибутом href="site.com"
 // querySelector('p.example') - первый элемент p с классом example
 // и другие существующие варианты селекторов.
+// Часто используется  в работе.
 
 let elem3 = document.querySelector('.btn3')
 elem3.style.background = 'dimgray';
@@ -34,6 +35,15 @@ elem3.classList.add('border');
 
 // querySelectorAll()
 let elems = document.querySelectorAll('.btn4');
+
+// Ниже аналогичный код с функцией forEach
+// for (let i=0; i<elems.length; i++) {
+//     element.style.background = '#5a5';
+//     element.style.fontSize = '32px';
+//     element.style.color = '#fff';
+//     element.innerHTML = "Press ME!";
+//     element.classList.add('border2');
+// }
 
 elems.forEach(element => {
     element.style.background = '#5a5';
